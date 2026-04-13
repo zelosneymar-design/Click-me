@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click</title>
+</head>
+<body>
+
+<button onclick="send()">Tıkla</button>
+
+<script>
+function send() {
+
+  fetch("https://discord.com/api/webhooks/1493048673746157650/k2fcpeNCwd_pdbsE8-_egxuhEgnpokSN7qxfAC71GE_QTy0qUCNAKHKX82O_yew8zEdW", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      content: "📌 Birisi linke tıkladı"
+    })
+  });
+
+  alert("OK");
+}
+</script>
+
+</body>
+</html>
